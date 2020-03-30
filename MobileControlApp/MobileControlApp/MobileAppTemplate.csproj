@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Sockets.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.WebSockets.Client" Version="4.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\ControllerPage.xaml.cs">
+      <DependentUpon>ControllerPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
